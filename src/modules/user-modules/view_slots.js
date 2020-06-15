@@ -1,5 +1,12 @@
 import React from 'react';
+import Header from '../Header';
+import WrapperDiv from './../../global-modules/components/WrapperDiv'
 
 export default function ViewSlots(){
-    return(<h1>Hello, World</h1>)
+    return(
+        <div> 
+            <Header/>
+            <WrapperDiv />
+        </div>
+    )
 }

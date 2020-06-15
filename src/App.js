@@ -38,7 +38,7 @@ class App extends React.Component{
                 <Router>
                 <Route exact path = "/" component ={SignIn}/>
                 <Route path = '/signup' component={SignUp} />
-                <ProtectedRoute 
+                <Route 
                     path = '/view_slots'
                     exact = {true}
                     component = {ViewSlots} />
