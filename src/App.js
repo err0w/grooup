@@ -4,7 +4,7 @@ import './index.css';
 import SignIn from './modules/authentication/SignIn';
 import SignUp from './modules/authentication/SignUp'
 import ViewSlots from './modules/user-modules/view_slots';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ProtectedRoute from './HOCs/ProtectedRoute'
 import {fireAuth} from './configurations/firebase'
 import firebase from 'firebase';
@@ -34,16 +34,15 @@ class App extends React.Component{
     
     render() {
         return(
-            <React.StrictMode>
                 <Router>
+                <Switch>
+                <ProtectedRoute
+                    exact path = '/view_slots'
+                    component = {ViewSlots} />
                 <Route exact path = "/" component ={SignIn}/>
                 <Route path = '/signup' component={SignUp} />
-                <Route 
-                    path = '/view_slots'
-                    exact = {true}
-                    component = {ViewSlots} />
+                </Switch>
                 </Router>
-            </React.StrictMode>
         )
     }
     

@@ -9,6 +9,11 @@ const useStyles = makeStyles(() => ({
     },
     wrapperDiv:{
         
+    },
+    timeButtons: {
+        borderRadius:0,
+        padding: '4px',
+        marginBottom: '10px'
     }
 }))
 
