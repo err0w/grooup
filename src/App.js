@@ -4,11 +4,11 @@ import './index.css';
 import SignIn from './modules/authentication/SignIn';
 import SignUp from './modules/authentication/SignUp'
 import ViewSlots from './modules/user-modules/view_slots';
+import SetInterview from './modules/user-modules/setInterview';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ProtectedRoute from './HOCs/ProtectedRoute'
 import {fireAuth} from './configurations/firebase'
 import firebase from 'firebase';
-// const ProtectedProfile = WithAuthProtection('/view_slots')(ViewSlots)
 
 class App extends React.Component{
 
@@ -39,6 +39,7 @@ class App extends React.Component{
                 <ProtectedRoute
                     exact path = '/view_slots'
                     component = {ViewSlots} />
+                <Route path = "/setInterview" component={SetInterview} />
                 <Route exact path = "/" component ={SignIn}/>
                 <Route path = '/signup' component={SignUp} />
                 </Switch>

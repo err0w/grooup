@@ -8,7 +8,22 @@ const useStyles = makeStyles(() => ({
         width: 250
     },
     wrapperDiv:{
-       marginTop: '10%' 
+       background: '#FFDFD',
+       border: '1px solid rgba(0, 149, 189, 0.3)',
+       boxSizing: 'border-box',
+       borderRadius: '20px',
+       marginTop: '1%'
+    },
+    interviewDivWithActions:{
+        background: '#FFDFD',
+        border: '1px solid rgba(0, 0, 0)',
+        boxSizing: 'border-box',
+        marginTop: '1%'
+     },
+    interviewDivWithActionButtons: {
+        border: '1px solid black', 
+        width:'100%', 
+        position: 'relative'
     },
     timeButtons: {
         display: 'flex',
@@ -26,6 +41,6 @@ const useStyles = makeStyles(() => ({
         marginBottom: '10px',
         alignItems: 'center',
     }
-}))
+}));
 
 export default useStyles;
